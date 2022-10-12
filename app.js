@@ -1,11 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const crypto = require('crypto-js');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3000;
-const DATABASE_URL =
-  'mongodb+srv://kdhaka94:YxALSt9MRDwXiAVH@cluster0.gnzhc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const DATABASE_URL = process.env.DATABASE_URL;
 
 mongoose.connect(DATABASE_URL);
 
